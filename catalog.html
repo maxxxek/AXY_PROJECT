@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог | AXY Merch</title>
+    <meta name="description" content="Каталог мерча AXY. Худи, футболки, аксессуары, винил.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ХЕДЕР -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">AXY<span>MERCH</span></a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html" class="active">Каталог</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+                </div>
+                
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ЗАГОЛОВОК СТРАНИЦЫ -->
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container">
+            <h1>Каталог товаров</h1>
+            <p>Оригинальный мерч AXY. Лимитированные коллекции и эксклюзивные позиции.</p>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ С ФИЛЬТРАМИ -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <!-- Фильтры (левая колонка) -->
+                <div class="col-3">
+                    <div class="filters">
+                        <h3 class="filters-title">Фильтры</h3>
+                        
+                        <div class="filter-group">
+                            <h4>Категория</h4>
+                            <div class="filter-options">
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cat1">
+                                    <label for="cat1">Худи</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cat2">
+                                    <label for="cat2">Футболки</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cat3">
+                                    <label for="cat3">Аксессуары</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cat4">
+                                    <label for="cat4">Винил</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cat5">
+                                    <label for="cat5">CD</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Размер</h4>
+                            <div class="filter-options">
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="size1">
+                                    <label for="size1">S</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="size2">
+                                    <label for="size2">M</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="size3">
+                                    <label for="size3">L</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="size4">
+                                    <label for="size4">XL</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="size5">
+                                    <label for="size5">XXL</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Цена</h4>
+                            <div class="filter-options">
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="price1">
+                                    <label for="price1">До 2000 ₽</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="price2">
+                                    <label for="price2">2000 - 4000 ₽</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="price3">
+                                    <label for="price3">4000 - 6000 ₽</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="price4">
+                                    <label for="price4">6000+ ₽</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="filter-btn">Применить фильтры</button>
+                    </div>
+                </div>
+                
+                <!-- Товары (правая колонка) -->
+                <div class="col-9">
+                    <div class="products-grid">
+                        <!-- Карточки товаров (9 штук) -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x400?text=Hoodie+Black" alt="Худи черное">
+                                <span class="product-badge">Новинка</span>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Худи «Эхо» Black</h3>
+                                <p class="product-subtitle">Лимитированная серия</p>
+                                <div class="product-price">5 990 ₽</div>
+                                <div class="sizes">
+                                    <button class="size-btn">S</button>
+                                    <button class="size-btn">M</button>
+                                    <button class="size-btn">L</button>
+                                    <button class="size-btn">XL</button>
+                                </div>
+                            </div>
+                            <div class="product-footer">
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x400?text=Hoodie+White" alt="Худи белое">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Худи «Эхо» White</h3>
+                                <p class="product-subtitle">Лимитированная серия</p>
+                                <div class="product-price">5 990 ₽</div>
+                                <div class="sizes">
+                                    <button class="size-btn">S</button>
+                                    <button class="size-btn">M</button>
+                                    <button class="size-btn">L</button>
+                                    <button class="size-btn">XL</button>
+                                </div>
+                            </div>
+                            <div class="product-footer">
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x400?text=T-shirt+Black" alt="Футболка черная">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Футболка «AXY» Black</h3>
+                                <p class="product-subtitle">Базовый принт</p>
+                                <div class="product-price">2 990 ₽</div>
+                                <div class="sizes">
+                                    <button class="size-btn">S</button>
+                                    <button class="size-btn">M</button>
+                                    <button class="size-btn">L</button>
+                                    <button class="size-btn">XL</button>
+                                </div>
+                            </div>
+                            <div class="product-footer">
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x400?text=T-shirt+White" alt="Футболка белая">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Футболка «AXY» White</h3>
+                                <p class="product-subtitle">Базовый принт</p>
+                                <div class="product-price">2 990 ₽</div>
+                                <div class="sizes">
+                                    <button class="size-btn">S</button>
+                                    <button class="size-btn">M</button>
+                                    <button class="size-btn">L</button>
+                                    <button class="size-btn">XL</button>
+                                </div>
+                            </div>
+                            <div class="product-footer">
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x400?text=Cap" alt="Кепка">
+                                <span class="product-badge">Аксессуар</span>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Кепка «AXY»</h3>
+                                <p class="product-subtitle">Однотонная, вышивка</p>
+                                <div class="product-price">1 990 ₽</div>
+                            </div>
+                            <div class="product-footer">
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x400?text=Vinyl+Echo" alt="Винил Эхо">
+                                <span class="product-badge">Лимит</span>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Винил «Эхо»</h3>
+                                <p class="product-subtitle">Цветной винил</p>
+                                <div class="product-price">3 490 ₽</div>
+                                <p class="text-muted small">Осталось 30 шт.</p>
+                            </div>
+                            <div class="product-footer">
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x400?text=CD+Echo" alt="CD Эхо">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">CD «Эхо»</h3>
+                                <p class="product-subtitle">Дигипак, буклет</p>
+                                <div class="product-price">990 ₽</div>
+                            </div>
+                            <div class="product-footer">
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x400?text=Sticker" alt="Стикер">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Набор стикеров</h3>
+                                <p class="product-subtitle">5 шт., vinyl</p>
+                                <div class="product-price">490 ₽</div>
+                            </div>
+                            <div class="product-footer">
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x400?text=Tote+Bag" alt="Шопер">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Шопер «AXY»</h3>
+                                <p class="product-subtitle">Хлопок, принт</p>
+                                <div class="product-price">1 490 ₽</div>
+                            </div>
+                            <div class="product-footer">
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Пагинация -->
+                    <div class="text-center mt-5">
+                        <div class="flex justify-center gap-1">
+                            <button class="btn btn-small" disabled>1</button>
+                            <button class="btn btn-small">2</button>
+                            <button class="btn btn-small">3</button>
+                            <button class="btn btn-small">...</button>
+                            <button class="btn btn-small">10</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>AXY</h4>
+                    <p>Официальный магазин мерча артиста AXY.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Возврат</a></li>
+                        <li><a href="faq.html">Вопросы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li>merch@axy.com</li>
+                        <li>10:00–19:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 AXY Merch</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
