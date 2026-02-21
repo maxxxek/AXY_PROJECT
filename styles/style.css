@@ -553,6 +553,8 @@ body {
     max-height: 500px;
 }
 
+
+
 /* ========== СТЕКЛЯННЫЕ ФОРМЫ ========== */
 .contact-form {
     background: var(--white);
@@ -877,4 +879,60 @@ body {
     .features-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ===== СТИЛИ ДЛЯ ВАЛИДАЦИИ ФОРМЫ ===== */
+.form-control.error {
+    border-color: var(--accent-color) !important;
+    background-color: rgba(230, 57, 70, 0.02);
+    animation: shake 0.3s ease-in-out;
+}
+
+.form-control.error:focus {
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.error-message {
+    color: var(--accent-color);
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#agreement.error {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.help-text {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-top: 5px;
+    transition: color 0.3s;
+}
+
+.form-control:focus + .help-text {
+    color: var(--gray-700);
+}
+
+/* Анимация успешной отправки */
+.btn-black:active {
+    transform: scale(0.95);
+}
+
+/* Стили для консольных сообщений (только для разработчика) */
+.console-ready {
+    display: none;
 }

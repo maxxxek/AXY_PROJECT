@@ -4,25 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты | AXY Merch</title>
-    <meta name="description" content="Свяжитесь с нами по вопросам заказа, доставки и сотрудничества.">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <!-- ХЕДЕР -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">AXY<span>MERCH</span></a>
-                
-                <ul class="nav-menu" id="navMenu">
+                <ul class="nav-menu">
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="catalog.html">Каталог</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contacts.html" class="active">Контакты</a></li>
                 </ul>
-                
                 <div class="nav-icons">
                     <a href="#"><i class="fas fa-search"></i></a>
                     <a href="#">
@@ -30,133 +25,131 @@
                         <span class="cart-count">2</span>
                     </a>
                 </div>
-                
-                <div class="burger" id="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </nav>
         </div>
     </header>
 
-    <!-- ЗАГОЛОВОК -->
     <section class="hero" style="padding: 60px 0;">
         <div class="container">
             <h1>Контакты</h1>
-            <p>Мы всегда на связи. Ответим на любые вопросы.</p>
+            <p>Мы всегда на связи. Заполните форму, и мы ответим в ближайшее время.</p>
         </div>
     </section>
 
-    <!-- ФОРМА И КОНТАКТЫ -->
     <section class="section">
         <div class="container">
             <div class="contact-form">
-                <h2 class="text-center">Напишите нам</h2>
+                <h2 class="text-center" style="margin-bottom: 30px;">Напишите нам</h2>
                 
                 <form id="feedbackForm">
+                    <!-- Поле ФИО -->
                     <div class="form-group">
-                        <label class="form-label">Имя *</label>
-                        <input type="text" class="form-control" placeholder="Ваше имя" required>
+                        <label for="fullname" class="form-label">ФИО <span style="color: var(--accent-color);">*</span></label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" 
+                               placeholder="Иванов Иван Иванович" 
+                               autocomplete="name"
+                               required>
+                        <p class="help-text" id="fullnameHelp" style="font-size: 12px; color: var(--gray-500); margin-top: 5px;">
+                            Введите фамилию, имя и отчество
+                        </p>
                     </div>
                     
+                    <!-- Поле Телефон -->
                     <div class="form-group">
-                        <label class="form-label">Email *</label>
-                        <input type="email" class="form-control" placeholder="example@email.com" required>
+                        <label for="phone" class="form-label">Телефон <span style="color: var(--accent-color);">*</span></label>
+                        <input type="tel" class="form-control" id="phone" name="phone" 
+                               placeholder="+7 (999) 123-45-67" 
+                               autocomplete="tel"
+                               required>
+                        <p class="help-text" id="phoneHelp" style="font-size: 12px; color: var(--gray-500); margin-top: 5px;">
+                            Формат: +7 (999) 123-45-67
+                        </p>
                     </div>
                     
+                    <!-- Поле Email -->
                     <div class="form-group">
-                        <label class="form-label">Тема</label>
-                        <select class="form-select">
-                            <option value="" disabled selected>Выберите тему</option>
-                            <option>Вопрос о товаре</option>
-                            <option>Сотрудничество</option>
-                            <option>Доставка и оплата</option>
-                            <option>Возврат</option>
-                            <option>Другое</option>
-                        </select>
+                        <label for="email" class="form-label">Email <span style="color: var(--accent-color);">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" 
+                               placeholder="example@mail.ru" 
+                               autocomplete="email"
+                               required>
+                        <p class="help-text" id="emailHelp" style="font-size: 12px; color: var(--gray-500); margin-top: 5px;">
+                            Введите корректный email адрес
+                        </p>
                     </div>
                     
+                    <!-- Поле Сообщение -->
                     <div class="form-group">
-                        <label class="form-label">Сообщение *</label>
-                        <textarea class="form-control" placeholder="Ваше сообщение..." rows="5" required></textarea>
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="message" name="message" 
+                                  rows="5" placeholder="Ваше сообщение..."
+                                  autocomplete="off"></textarea>
+                        <p class="help-text" id="messageHelp" style="font-size: 12px; color: var(--gray-500); margin-top: 5px;">
+                            До 500 символов
+                        </p>
                     </div>
                     
+                    <!-- Согласие на обработку -->
                     <div class="form-check">
-                        <input type="checkbox" id="agree" required>
-                        <label for="agree">Соглашаюсь на обработку персональных данных *</label>
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <label for="agreement">Я согласен на обработку персональных данных <span style="color: var(--accent-color);">*</span></label>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Отправить сообщение</button>
+                    <!-- Кнопки -->
+                    <div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
+                        <button type="submit" class="btn btn-black">
+                            <i class="fas fa-paper-plane"></i>
+                            Отправить
+                        </button>
+                        <button type="reset" class="btn btn-outline">
+                            <i class="fas fa-undo"></i>
+                            Очистить
+                        </button>
+                    </div>
                 </form>
             </div>
             
             <!-- Контактная информация -->
-            <div class="contact-info">
-                <div class="contact-info-grid">
-                    <div class="contact-info-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Email</h3>
-                        <p>merch@axy.com</p>
-                        <p>support@axy.com</p>
-                    </div>
-                    
-                    <div class="contact-info-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>Время работы</h3>
-                        <p>Пн-Пт: 10:00 - 19:00</p>
-                        <p>Сб-Вс: выходной</p>
-                    </div>
-                    
-                    <div class="contact-info-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h3>Адрес шоурума</h3>
-                        <p>Москва, ул. Примерная, 123</p>
-                        <p>(по предварительной записи)</p>
-                    </div>
-                    
-                    <div class="contact-info-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <h3>Телефон</h3>
-                        <p>+7 (999) 123-45-67</p>
-                        <p>+7 (495) 123-45-67</p>
-                    </div>
+            <div class="contact-info-grid">
+                <div class="contact-info-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>merch@axy.com</p>
+                    <p>support@axy.com</p>
                 </div>
-            </div>
-            
-            <!-- Карта (заглушка) -->
-            <div class="mt-5">
-                <div class="bg-light p-5 text-center rounded">
-                    <i class="fas fa-map-marked-alt fa-3x text-accent mb-3"></i>
-                    <h3>Как нас найти</h3>
-                    <p>м. Примерная, выход №1, 5 минут пешком</p>
-                    <div style="height: 200px; background: #e0e0e0; border-radius: var(--border-radius);" class="flex items-center justify-center">
-                        <p class="text-muted">Здесь будет интерактивная карта</p>
-                    </div>
+                <div class="contact-info-item">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Время работы</h3>
+                    <p>Пн-Пт: 10:00 - 19:00</p>
+                    <p>Сб-Вс: выходной</p>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Адрес</h3>
+                    <p>Москва, ул. Примерная, 123</p>
+                    <p>шоурум по записи</p>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Телефон</h3>
+                    <p>+7 (999) 123-45-67</p>
+                    <p>+7 (495) 123-45-67</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ФУТЕР -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h4>AXY</h4>
-                    <p>Официальный магазин мерча артиста AXY.</p>
+                    <p style="color: var(--gray-500);">Официальный магазин мерча</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-telegram"></i></a>
                         <a href="#"><i class="fab fa-vk"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -171,25 +164,29 @@
                 <div class="footer-column">
                     <h4>Поддержка</h4>
                     <ul>
-                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
                         <li><a href="#">Возврат</a></li>
-                        <li><a href="faq.html">Вопросы</a></li>
+                        <li><a href="faq.html">Вопросы и ответы</a></li>
+                        <li><a href="contacts.html">Связаться с нами</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Контакты</h4>
                     <ul>
-                        <li>merch@axy.com</li>
-                        <li>10:00–19:00</li>
+                        <li><i class="fas fa-envelope"></i> merch@axy.com</li>
+                        <li><i class="fas fa-clock"></i> 10:00–19:00</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 AXY Merch</p>
+                <p>© 2025 AXY Merch. Все права защищены.</p>
             </div>
         </div>
     </footer>
 
-    <script src="java/scripts.js"></script>
+    <!-- Подключаем скрипты (порядок важен!) -->
+    <script src="java/validation.js"></script>
+    <script src="java/consoleLogger.js"></script>
 </body>
 </html>
